@@ -56,51 +56,27 @@ function loadSite() {
 	});
 
 	// Contact Form
-	$("#success-alert").hide();
-	$("#success-contact").hide();
-
-	$('body').on('click', '#contact-submit', function(){
-		var error = CFValidate();
-		if (error) {
-			$.ajax({
-				type: "POST",
-				url: "contact.php",
-				data: $("#contact-form").serialize(),
-				success: function (result) {
-					$('input[type=text],textarea').each(function () {
-						$(this).val('');
-					})
-					$("#success-alert").html(result);
-					$("#success-alert").fadeIn("slow");
-					$('#success-alert').delay(5000).fadeOut("slow");
-				}
-			});
-		}
-	});
-	function CFValidate() {
-		var error = true;
-		$('#contact-form input[type=text]').each(function (index) {
-			if (index == 0) {
-				if ($(this).val() == null || $(this).val() == "") {
-					$("#contact-form").find("input:eq(" + index + ")").addClass("required-error");
-					error = false;
-				}
-				else {
-					$("#contact-form").find("input:eq(" + index + ")").removeClass("required-error");
-				}
+	var $contactForm = $('#contact-form');
+	$contactForm.submit(function(e) {
+		e.preventDefault();
+		$.ajax({
+			url: '//formspree.io/subhojit1992.mondal@gmail.com',
+			method: 'POST',
+			data: $(this).serialize(),
+			dataType: 'json',
+			beforeSend: function() {
+				$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+			},
+			success: function(data) {
+				$contactForm.find('.alert--loading').hide();
+				$contactForm.append('<div class="alert alert--success">Message sent!</div>');
+			},
+			error: function(err) {
+				$contactForm.find('.alert--loading').hide();
+				$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
 			}
-			else if (index == 1) {
-				if (!(/(.+)@(.+){2,}\.(.+){2,}/.test($(this).val()))) {
-					$("#contact-form").find("input:eq(" + index + ")").addClass("required-error");
-					error = false;
-				} else {
-					$("#contact-form").find("input:eq(" + index + ")").removeClass("required-error");
-				}
-			}
-
 		});
-		return error;
-	}
+	});
 
 	//navigation
 	$('#nav-open').click(function() {

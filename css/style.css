@@ -1,9 +1,9 @@
 /* ----------------------------------
 
-Theme Name: Vincent
-Author: PixelShow
-Author URI: http://pixel-show.com
-Description: Personal Portfolio Template
+Theme Name: n8_fury
+Author: Subhojit Mondal
+Author URI: http://iamsubhojit.com
+Description: Personal Portfolio
 Version: 1.0
 
 -------------------------------------
@@ -233,7 +233,14 @@ p {
 .header-name {
   color: #fff;
   font-size: 28px;
-  margin-top: -20px; }
+  margin-top: -20px; 
+}
+.header-name a{
+  color: #caf4f9;
+}
+.header-name a:hover{
+  color: #1da1f2;
+}
 
 .hello {
   font-size: 230px;
