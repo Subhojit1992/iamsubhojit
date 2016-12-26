@@ -78,6 +78,39 @@ function loadSite() {
 	// 	});
 	// });
 
+
+	// ========================================
+	// 
+	// contact form animation
+	// 
+	// ========================================
+
+
+	// toggleFab();
+
+	//Fab click
+	$('#prime').click(function() {
+	  toggleFab();
+	});
+	
+	//Toggle chat and links
+	function toggleFab() {
+	  $('.prime').toggleClass('zmdi-plus');
+	  $('.prime').toggleClass('zmdi-close');
+	  $('.prime').toggleClass('is-active');
+	  $('#prime').toggleClass('is-float');
+	  $('.chat').toggleClass('is-visible');
+	  $('.fab').toggleClass('is-visible');
+	}
+
+	
+
+	// ========================================
+	// 
+	// contact form animation
+	// 
+	// ========================================
+
 	$('#contact-form').submit(function(e) {
       var name = $('#inputName');
       var email = $('#inputEmail');
