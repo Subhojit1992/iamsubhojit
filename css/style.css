@@ -53,6 +53,9 @@ body {
 .left {
   text-align: left; }
 
+.display-none {
+  display: none;
+}
 .padded {
   padding: 30px 0; }
 

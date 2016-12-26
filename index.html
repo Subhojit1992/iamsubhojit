@@ -184,6 +184,27 @@
 			</div>
 		</div>
 
+		<form id="contact-form">
+			<div class="form-group center-block">
+				<label for="inputName">Name</label>
+				<input type="text" class="form-control contact-input" id="inputName" placeholder="Name" name="name"/>
+			</div>
+			<div class="form-group center-block">
+				<label for="inputEmail">Email</label>
+				<input type="email" class="form-control contact-input" id="inputEmail" placeholder="Email" name="email"/>
+			</div>
+			<div class="form-group center-block">
+				<label for="inputMessage">Message</label>
+				<textarea id="inputMessage" class="form-control contact-input" rows="3" placeholder="Leave a Message" name="message"></textarea>
+			</div>
+			<div class="text-center">
+				<button class="btn btn-default" type="submit" value="Send">Submit</button>
+				<div class="alert alert-danger center-block submit-fail display-none">Please fill in all form fields<br><a href="#"><i class="fa fa-long-arrow-left fa-4x"></i></a></div>
+				<div class="alert alert-success center-block submit-success display-none">Thanks for stopping to say Hello!<br><a href="#"><i class="fa fa-long-arrow-left fa-4x"></i></a></div>
+			</div>
+			<span></span>
+		</form>
+
 	</div>
 	
 	<!-- javascript -->
