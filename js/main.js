@@ -79,11 +79,12 @@ function loadSite() {
 	// });
 
 	$('#contact-form').submit(function(e) {
-      var name = $('#inputName')
-      var email = $('#inputEmail')
-      var message = $('#inputMessage')
+      var name = $('#inputName');
+      var email = $('#inputEmail');
+      var message = $('#inputMessage');
+      var response = grecaptcha.getResponse();
     
-      if(name.val() == "" || email.val() == "" || message.val() == "") {
+      if(name.val() == "" || email.val() == "" || message.val() == "" || response.length == 0) {
         $('.submit-fail').fadeToggle(400);
         return false;
       }
