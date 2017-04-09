@@ -2,8 +2,8 @@
 title:               Lagrange
 tagline:             a minimalist Jekyll theme
 description:
-baseurl:            #"/blog"
-url:                #"http://iamsubhojit.com"
+baseurl:            #"http://iamsubhojit.com/blog"
+url:                #"http://iamsubhojit.com/blog"
 github:
   url:               #"http://iamsubhojit.com/blog"
 author:
