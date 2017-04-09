@@ -2,10 +2,10 @@
 title:               Lagrange
 tagline:             a minimalist Jekyll theme
 description:
-baseurl:            #"/Lagrange"
-url:                #"https://lenpaul.github.io"
+baseurl:            #"/blog"
+url:                #"http://iamsubhojit.com"
 github:
-  url:               #"https://lenpaul.github.io/Lagrange"
+  url:               #"http://iamsubhojit.com/blog"
 author:
   name:              "Paul Le"
   email:             "l.nguyen.paul@gmail.com"
