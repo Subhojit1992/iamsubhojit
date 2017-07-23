@@ -1,11 +1,3 @@
-# STATIC
+# Iamsubhojit.com
 
-This directory contains your static files.
-Each file inside this directory is mapped to /.
-
-Example: /static/robots.txt is mapped as /robots.txt.
-
-More information about the usage of this directory in the documentation:
-https://nuxtjs.org/guide/assets#static
-
-**This directory is not required, you can delete it if you don't want to use it.**
+I am Subhojit the Front End Developer from Kolkata, India. I like any new technology that related with the Front End Developer [visit site](http://iamsubhojit.com/)
